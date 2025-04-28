@@ -20,54 +20,10 @@ import creational.Builder;
 import creational.ConcreteBuilder;
 import creational.Director;
 import creational.BuilderProduct;
-
-import creational.Singleton;
-import creational.EnumSingleton;
-import creational.Creator;
-import creational.ConcreteCreatorA;
-import creational.ConcreteCreatorB;
-import structural.Target;
-import structural.Adapter;
-import structural.Adaptee;
-import structural.Component;
-import structural.ConcreteComponent;
-import structural.ConcreteDecorator;
-import behavioral.Subject;
-import behavioral.Observer;
-import behavioral.ConcreteObserver;
-import behavioral.Context;
-import behavioral.ConcreteStrategyA;
-import behavioral.ConcreteStrategyB;
-
-import creational.Builder;
-import creational.ConcreteBuilder;
-import creational.Director;
-import creational.BuilderProduct;
 import creational.FunctionalBuilder;
+import creational.EnumFunctionalFactory;
+import creational.Product;
 
-import creational.Singleton;
-import creational.EnumSingleton;
-import creational.Creator;
-import creational.ConcreteCreatorA;
-import creational.ConcreteCreatorB;
-import structural.Target;
-import structural.Adapter;
-import structural.Adaptee;
-import structural.Component;
-import structural.ConcreteComponent;
-import structural.ConcreteDecorator;
-import behavioral.Subject;
-import behavioral.Observer;
-import behavioral.ConcreteObserver;
-import behavioral.Context;
-import behavioral.ConcreteStrategyA;
-import behavioral.ConcreteStrategyB;
-
-import creational.Builder;
-import creational.ConcreteBuilder;
-import creational.Director;
-import creational.BuilderProduct;
-import creational.FunctionalBuilder;
 import java.util.function.Supplier;
 
 public class DesignPatternsDemo {
@@ -95,11 +51,11 @@ public class DesignPatternsDemo {
             .build();
         functionalProduct.showParts();
 
-        System.out.println("\n=== Factory Method Pattern ===");
-        Creator creatorA = new ConcreteCreatorA();
-        creatorA.someOperation();
-        Creator creatorB = new ConcreteCreatorB();
-        creatorB.someOperation();
+        System.out.println("\n=== Factory Method Pattern with Enum Functional Factory ===");
+        Product productA = EnumFunctionalFactory.CONCRETE_PRODUCT_A.create();
+        productA.use();
+        Product productB = EnumFunctionalFactory.CONCRETE_PRODUCT_B.create();
+        productB.use();
 
         System.out.println("\n=== Adapter Pattern ===");
         Target adapter = new Adapter(new Adaptee());
