@@ -59,23 +59,6 @@ Defines a family of algorithms, encapsulates each one, and makes them interchang
 
 ---
 
-## How to Run
-
-Compile all Java files and run `DesignPatternsDemo` to see the patterns in action.
-
-```bash
-javac src/**/*.java
-java -cp src DesignPatternsDemo
-```
-
----
-
-## Images and Diagrams
-
-This project does not include embedded images or diagrams. To visualize the design patterns, you can refer to standard UML diagrams available online or use UML tools to generate diagrams based on the source code.
-
----
-
 ## License
 
 This project is open source and free to use for learning and reference.
